@@ -1,0 +1,5 @@
+Order No,Line,Rev,SKU,Description,Qty,Unit Price,Amount,Currency,Order Date
+A-2001,1,1,SKU-MLT,"Multi-line description:
+second line
+third line",2,4.25,8.50,USD,04/01/2024
+A-2001,2,1,SKU-QTE,"He said ""hello"" loudly",1,7.00,7.00,USD,04/01/2024

@@ -1,0 +1,26 @@
+{
+  "supplier": "BOMCORP",
+  "version": "1.1.0",
+  "priority": 10,
+  "match": {
+    "filename": ["*bomcorp*"],
+    "required_headers": ["Belegnr", "Position", "Menge"]
+  },
+  "csv": { "encoding": "utf-8-sig", "delimiter": ";" },
+  "number": { "thousands_separator": ".", "decimal_point": "," },
+  "fields": {
+    "doc_no":      { "source": "Belegnr",     "required": true },
+    "line_no":     { "source": "Position",    "required": true, "type": "int" },
+    "revision":    { "source": "Version",     "required": true, "type": "int" },
+    "item_code":   { "source": "Artikelnr",   "required": true },
+    "description": { "source": "Bezeichnung", "required": false },
+    "quantity":    { "source": "Menge",       "required": true, "type": "decimal" },
+    "unit_price":  { "source": "Einzelpreis", "required": true, "type": "decimal",
+                     "multiplier": "0.01" },
+    "amount":      { "source": "Gesamtpreis", "required": true, "type": "decimal",
+                     "multiplier": "0.01" },
+    "currency":    { "source": "Waehrung",    "required": false },
+    "doc_date":    { "source": "Belegdatum",  "required": true, "type": "date",
+                     "formats": ["%d.%m.%Y"] }
+  }
+}

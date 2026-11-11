@@ -1,0 +1,4 @@
+Order No,Line,Rev,SKU,Description,Qty,Unit Price,Amount,Currency,Order Date
+A-1001,1,1,SKU-RED,Red widget,10,1.50,15.00,USD,03/15/2024
+A-1001,2,1,SKU-BLU,Blue widget,5,2.00,10.00,USD,03/15/2024
+A-1002,1,1,SKU-GRN,Green gadget,3,9.99,29.97,USD,03/16/2024

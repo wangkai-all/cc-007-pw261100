@@ -1,0 +1,23 @@
+{
+  "supplier": "JSONLINE",
+  "version": "2.0.0",
+  "priority": 10,
+  "match": {
+    "filename": ["*.jsonl"],
+    "required_headers": ["orderId", "lineNo", "qty"]
+  },
+  "fields": {
+    "doc_no":      { "source": "orderId",    "required": true },
+    "line_no":     { "source": "lineNo",     "required": true, "type": "int" },
+    "revision":    { "source": "rev",        "required": false, "type": "int" },
+    "item_code":   { "source": "sku",        "required": true },
+    "description": { "source": "title",      "required": false },
+    "quantity":    { "source": "qty",        "required": true, "type": "decimal" },
+    "unit_price":  { "source": "priceYuan",  "required": true, "type": "decimal" },
+    "amount":      { "source": "totalWan",   "required": true, "type": "decimal",
+                     "multiplier": "10000" },
+    "currency":    { "source": "ccy",        "required": false },
+    "doc_date":    { "source": "ordered",    "required": true, "type": "date",
+                     "formats": ["%Y/%m/%d", "%Y-%m-%d"] }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "supplier": "ACME",
+  "version": "1.0.0",
+  "priority": 10,
+  "match": {
+    "filename": ["*acme*", "*quoted*"],
+    "required_headers": ["Order No", "Line", "Qty"]
+  },
+  "csv": { "encoding": "utf-8-sig", "delimiter": "," },
+  "number": { "thousands_separator": ",", "decimal_point": "." },
+  "fields": {
+    "doc_no":      { "source": ["Order No", "OrderNo"], "required": true },
+    "line_no":     { "source": "Line",        "required": true, "type": "int" },
+    "revision":    { "source": "Rev",         "required": true, "type": "int" },
+    "item_code":   { "source": "SKU",         "required": true },
+    "description": { "source": "Description", "required": false },
+    "quantity":    { "source": "Qty",         "required": true, "type": "decimal" },
+    "unit_price":  { "source": "Unit Price",  "required": true, "type": "decimal" },
+    "amount":      { "source": "Amount",      "required": true, "type": "decimal" },
+    "currency":    { "source": "Currency",    "required": false },
+    "doc_date":    { "source": "Order Date",  "required": true, "type": "date",
+                     "formats": ["%m/%d/%Y", "%Y-%m-%d"] }
+  }
+}

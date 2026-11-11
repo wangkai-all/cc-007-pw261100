@@ -1,0 +1,4 @@
+{"orderId": "J-9001", "lineNo": 1, "rev": 1, "sku": "SKU-J1", "title": "JSON widget", "qty": "7", "priceYuan": "3.50", "totalWan": "0.00245", "ccy": "CNY", "ordered": "2024/03/20", "remark": "供应商自定义字段"}
+{"orderId": "J-9001", "lineNo": 2, "rev": 1, "sku": "SKU-J2", "title": "JSON gadget", "qty": "1", "priceYuan": "99.00", "totalWan": "0.0099", "ccy": "CNY", "ordered": "2024/03/20"}
+{"orderId": "", "lineNo": 3, "rev": 1, "sku": "SKU-J3", "title": "missing order id", "qty": "1", "priceYuan": "1.00", "totalWan": "0.0001", "ccy": "CNY", "ordered": "2024/03/21"}
+{this is not valid json}
